@@ -1,0 +1,37 @@
+{
+  "name": "codememo",
+  "displayName": "CodeMemo",
+  "description": "A powerful note-taking extension for VS Code",
+  "version": "1.1.0",
+  "publisher": "TejasAgrawal",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.makeNotes"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.makeNotes",
+        "title": "Make Notes"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "vsce": "^1.103.1"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "fast-xml-parser": "^4.4.0"
+  }
+}
